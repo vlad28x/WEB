@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Указатели и ссылки</title>
+	</head>
+	<body>
+		<table align="center" width="90%" rules="all" border="1">
+			<tr align="center">
+				<td colspan="2">
+					<h2>Справочник по языку C++</h2>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" width="200">
+					<ol type="I">
+						<li>
+							<a href="index.html">Введение</a>
+							<ol type="1">
+								<li><a href="1.html">Процесс трансляции</a></li>
+								<li><a href="2.html">Целые числа</a></li>
+								<li><a href="3.html">Числа с плавающей запятой</a></li>
+								<li><a href="4.html">Указатели и ссылки</a></li>
+							</ol>
+						</li>
+					</ol>
+				</td>
+				<td valign="top">
+					<p>
+						<b>Ссылка</b> <i>reference</i> — механизм языка программирования (C++), позволяющий привязать имя к значению. В частности, ссылка позволяет дать дополнительное имя переменной и передавать в функции сами переменные, а не значения переменных.
+						<blockquote>
+							<pre>int n = 0;<br>int &r = n; /* теперь r -- ссылка на n<br>n = 10;cout << r << '\n'; // выведет 10<br>r = 20;<br>cout << n << '\n'; // выведет 20<br>cout << (&n == &r) << '\n'; // выведет 1, т.е. истина</pre>
+						</blockquote>
+					</p>
+					<p>
+						Переменная, значением которой является адрес, называется <b>указателем</b> <i>pointer</i>.<br>
+						<b>Разыменованием</b> указателя <i>pointer dereferencing</i> называют обращение к значению по адресу, хранимому указателем.
+						<blockquote>
+							<pre>int value = 5;<br>int *ptr = &value; // инициализируем ptr адресом значения переменной</pre>
+						</blockquote>
+						Приведенное выше можно проиллюстрировать следующим образом:
+					</p>
+					<p align="center"><img src="img/img_pointer.jpg"><br><big>Присваивание значений указателю</big></p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					© 2021 Скибин Владислав, по всем вопросам пишите по адресу vladskibin@bk.ru
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
