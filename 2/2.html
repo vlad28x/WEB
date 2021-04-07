@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Целые числа</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="preload">
+	<header>
+		<h1><a class="index" href="index.html">Справочник по языку C++</a></h1>
+	</header>
+	<nav class="menu">
+		<ul>
+			<li><a href="index.html">Введение</a>
+				<ul>
+					<li><a href="1.html">Процесс трансляции</a></li>
+					<li><a href="2.html">Целые числа</a></li>
+					<li><a href="3.html">Числа с плавающей запятой</a></li>
+					<li><a href="4.html">Указатели и ссылки</a></li>
+				</ul>
+			</li>
+			<li><a href="https://www.google.ru/">Google</a></li>
+		</ul>
+	</nav>
+	<main>
+		<article>
+			<p><b>Целочисленный тип данных</b> — это тип, переменные которого могут содержать только целые числа (без дробной части, например: -2, -1, 0, 1, 2). В языке C++ есть 5 основных целочисленных типов, доступных для использования:</p>
+			<table>
+				<tr>
+					<th>Категория</th>
+					<th>Тип</th>
+					<th>Минимальный размер</th>
+				</tr>
+				<tr>
+					<td>Символьный тип данных</td>
+					<td>char</td>
+					<td>1 байт</td>
+				</tr>
+				<tr>
+					<td rowspan="4">Целочисленный тип данных</td>
+					<td>short</td>
+					<td>2 байта</td>
+				</tr>
+				<tr>
+					<td>int</td>
+					<td>2 байта (но чаще всего 4 байта)</td>
+				</tr>
+				<tr>
+					<td>long</td>
+					<td>4 байта</td>
+				</tr>
+				<tr>
+					<td>long long</td>
+					<td>8 байт</td>
+				</tr>
+			</table> 
+			<p>Определение происходит следующим образом:</p>
+			<code>char c;<br>short int si; // допустимо<br>short s;      // предпочтительнее<br>int i;<br>long int li; // допустимо<br>long l;      // предпочтительнее<br>long long int lli; // допустимо<br>long long ll;      // предпочтительнее</code>
+		</article>
+	</main>
+	<footer>
+		<hr>© 2021 Скибин Владислав, по всем вопросам пишите по адресу <address><a href="mailto:vladskibin@bk.ru">vladskibin@bk.ru</a></address>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+		$("window").load(function() {
+			$("body").removeClass("preload");
+		});
+	</script>
+</body>
+</html>

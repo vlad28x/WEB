@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Числа с плавающей запятой</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="preload">
+	<header>
+		<h1><a class="index" href="index.html">Справочник по языку C++</a></h1>
+	</header>
+	<nav class="menu">
+		<ul>
+			<li><a href="index.html">Введение</a>
+				<ul>
+					<li><a href="1.html">Процесс трансляции</a></li>
+					<li><a href="2.html">Целые числа</a></li>
+					<li><a href="3.html">Числа с плавающей запятой</a></li>
+					<li><a href="4.html">Указатели и ссылки</a></li>
+				</ul>
+			</li>
+			<li><a href="https://www.google.ru/">Google</a></li>
+		</ul>
+	</nav>
+	<main>
+		<article>
+			<p>Есть три типа данных с плавающей точкой: <b>float</b>, <b>double</b> и <b>long double</b>. Язык C++ определяет только их минимальный размер (как и с целочисленными типами). Типы данных с плавающей точкой всегда являются signed (т.е. могут хранить как положительные, так и отрицательные числа).</p>
+			<table>
+				<tr>
+					<th>Категория</th>
+					<th>Тип</th>
+					<th>Минимальный размер</th>
+				</tr>
+				<tr>
+					<td rowspan="3">Тип данных с плавающей точкой</td>
+					<td>float</td>
+					<td>4 байта</td>
+				</tr>
+				<tr>
+					<td>double</td>
+					<td>8 байт</td>
+				</tr>
+				<tr>
+					<td>long double</td>
+					<td>8 байт</td>
+				</tr>
+			</table>
+			<p>Объявление переменных разных типов данных с плавающей точкой:</p>
+			<code>float fValue;<br>double dValue;<br>long double dValue2;</code>
+			<p>Переменные типа с плавающей точкой отлично подходят для хранения очень больших или очень маленьких (в том числе и дробных) чисел до тех пор, пока они имеют ограниченное количество значащих цифр (не превышают точность определенного типа данных).</p>
+			<p>Переменные типа с плавающей точкой могут иметь небольшие ошибки округления, даже если точность типа не превышена. В большинстве случаев такие ошибки остаются незамеченными, так как они не столь значительны. Но следует помнить, что сравнение переменных типов с плавающей точкой может иметь неопределенные последствия/результаты (а выполнение математических операций с такими переменными может только увеличить масштаб этих ошибок).</p>
+		</article>
+	</main>
+	<footer>
+		<hr>© 2021 Скибин Владислав, по всем вопросам пишите по адресу <address><a href="mailto:vladskibin@bk.ru">vladskibin@bk.ru</a></address>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+		$("window").load(function() {
+			$("body").removeClass("preload");
+		});
+	</script>
+</body>
+</html>

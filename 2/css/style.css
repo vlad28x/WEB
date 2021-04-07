@@ -1,0 +1,200 @@
+/*Отключение анимации при загрузке страницы*/
+.preload {
+	transition: none !important;
+}
+
+/*Выпадающее меню*/
+.menu ul {
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+.menu ul li {
+	position: relative;
+}
+
+.menu ul li a {
+    display:block;
+    font-weight:bold;
+    color: white;
+    background: grey;
+    text-decoration:none;
+    transition: background .5s;
+}
+
+.menu > ul > li > a {
+	border: 1px solid black;
+    border-radius: 5px;
+    margin: 0px 0px 5px;
+    padding:10px 15px;
+}
+
+.menu ul li ul li:first-child a {
+	border: 1px solid black;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.menu ul li ul li:last-child a {
+	border-radius: 0px 0px 5px 5px;
+}
+
+.menu ul li ul li:first-child ~li a {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.menu ul li ul li a {
+	white-space: nowrap;
+    padding: 5px 15px;
+}
+
+.menu ul li ul {
+	visibility: hidden;
+    position: absolute;
+    padding-left: 1px;
+    top: 0px;
+    left: 100%;
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-5px);
+    transition: .5s;
+}
+
+.menu ul li:hover ul {
+	transform: translateX(0px);
+	visibility: visible;
+	opacity: 1;
+}
+
+.menu ul li:hover a {
+    background: dimgrey;
+}
+
+.menu ul li ul li:hover a {
+    background: lightslategray;
+}
+
+/*Оформление header*/
+.index {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	color: black;
+	justify-content: center;
+	align-items: center;
+	text-decoration:none;
+}
+
+h1 {
+	width: 100%;
+	height: 100%;
+}
+
+/*Оформление параграфов*/
+p {
+	margin: 0px;
+	text-indent: 30px;
+}
+
+li > p {
+	text-indent: 0px;
+}
+
+/*Оформление упорядоченного спискаы*/
+ol {
+	margin: 0px;
+	padding-left: 45px;
+}
+
+/*Оформление рисунков*/
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: max-content;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+figcaption {
+    background-color: #222;
+    color: white;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+/*Оформление семантических элементов*/
+body {
+	margin: 10px 100px 0px;
+	min-width: 600px;
+}
+
+header {
+	display: flex;
+	background: grey;
+	border: 1px solid black;
+	height: 100px;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+}
+
+nav {
+	float: left;
+	margin: 5px 5px 5px 0px;
+	width: 200px;
+}
+
+article {
+	margin: 5px 0px;
+	padding: 0px 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background: gainsboro;
+	overflow: hidden;
+}
+
+footer {
+	text-align: center;
+	margin: 5px 0px;
+	clear: both;
+}
+
+address {
+	display: inline-block;
+}
+
+/*Оформление таблицы*/
+table {
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 80%;
+	margin: auto;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+	padding: 2px;
+}
+
+th {
+	background: #9e9e9e;
+}
+
+td {
+	background: #bdbdbd;
+}
+
+/*Оформление программного кода*/
+code {
+	border-left: 2px dotted red;
+	display: block;
+	margin: 5px 30px;
+	padding-left: 5px; 
+}
