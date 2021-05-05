@@ -7,6 +7,22 @@ function sum(a) {
 	}
 }
 
+//Реализация второй функции с использованием приема проектирования «Модуль»
+var MyLibrary = (function() {
+	function helper(arr, func) {
+		let newArray = [];
+		arr.forEach(function(element) {
+			if(func(element)) newArray.push(element);
+		});
+		return newArray;
+	}
+	return {
+		filter : function(arr, func) {
+			return helper(arr, func);
+		}
+	}
+})();
+
 //Функция, которая получает массив arr и возвращает новый, в который входят только те элементы arr, для которых func возвращает true
 function filter(arr, func) {
 	let newArray = [];//Создаем пустой массив
